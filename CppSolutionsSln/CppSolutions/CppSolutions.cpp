@@ -2,10 +2,28 @@
 //
 
 #include <iostream>
+#include "Problems.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double x = 0.0;
+    double y = 0.0;
+    double result = 0.0;
+
+    cout << "Test Run" << endl << endl;
+    cout << "Enter 2 numbers to add.  Example 4 6" << endl;
+
+    Problems p;
+    while (true)
+    {
+        cin >> x >> y;
+        result = p.Add(x, y);
+        cout << "Result: " << result << endl;
+    }
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
