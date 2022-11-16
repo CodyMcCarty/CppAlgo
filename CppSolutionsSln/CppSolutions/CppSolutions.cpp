@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "Problems.h"
 
 using namespace std;
@@ -9,19 +10,21 @@ using namespace std;
 int main()
 {
     double x = 0.0;
-    double y = 0.0;
-    double result = 0.0;
 
     cout << "Test Run" << endl << endl;
-    cout << "Enter 2 numbers to add.  Example 4 6" << endl;
 
     Problems p;
-    while (true)
+    /*while (true)
     {
         cin >> x >> y;
         result = p.Add(x, y);
         cout << "Result: " << result << endl;
-    }
+    }*/
+    //std::string a = p.bmi(86.7, 1.7);
+    //x = p.Add(2, 2);
+
+    std::cout << p.bmi(91.6094, 1.69719) << std::endl;
+
 
     return 0;
 }

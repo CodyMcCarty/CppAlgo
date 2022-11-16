@@ -1,4 +1,3 @@
-﻿  CppSolutions.cpp
-  Problems.cpp
-  Generating Code...
+﻿  Problems.cpp
+C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\CppSolutions\Problems.cpp(12,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   CppSolutions.vcxproj -> C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\x64\Debug\CppSolutions.exe
