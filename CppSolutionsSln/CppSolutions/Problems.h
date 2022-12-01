@@ -1,6 +1,9 @@
 #include <string>
 #include <math.h>
 #include <iomanip>
+#include <algorithm>
+#include <iterator>
+#include <array>
 
 #pragma once
 class Problems
@@ -16,7 +19,10 @@ public:
 	Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 	*/
 	int cockroach_speed(double s);
+	std::string printerError(const std::string& s);
 	double Add(double x, double y);
 	std::string bmi(double w, double h);
+	int getCount(const std::string& inputStr);
+	
 };
 

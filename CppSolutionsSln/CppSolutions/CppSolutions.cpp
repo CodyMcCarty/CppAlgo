@@ -23,7 +23,18 @@ int main()
     //std::string a = p.bmi(86.7, 1.7);
     //x = p.Add(2, 2);
 
-    std::cout << p.bmi(91.6094, 1.69719) << std::endl;
+    //std::cout << p.bmi(91.6094, 1.69719) << std::endl;
+
+    //---------------------------------------------------------------------
+
+    std::cout << p.printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") << std::endl;
+
+
+
+
+    //---------------------------------------------------------------------
+
+
 
 
     return 0;

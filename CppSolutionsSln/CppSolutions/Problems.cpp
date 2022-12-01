@@ -5,6 +5,40 @@
 //{
 //}
 
+std::string Problems::printerError(const std::string& s)
+{
+	//int errors{ 0 };
+	//for (char c : s)
+	//{
+	//	if (c > 'm')
+	//	{
+	//		errors++;
+	//	}
+	//}
+	//return std::to_string(errors) + '/' + std::to_string(s.length());
+	auto const errors = std::count_if(s.begin(), s.end(), [](const char c)
+		{
+			return c > 'm';
+		});
+	return std::to_string(errors) + "/" + std::to_string(s.length());
+}
+
+//Lambda and switch statement
+int Problems::getCount(const std::string& inputStr) {
+	return std::count_if(inputStr.begin(), inputStr.end(), [](const char c) {
+		switch (c) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+			return true;
+		default:
+			return false;
+		}
+		});
+}
+
 std::string Problems::bmi(double w, double h)
 {
 	double bmiTest = w / h / h;
