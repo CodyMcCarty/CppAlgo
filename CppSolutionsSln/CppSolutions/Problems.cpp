@@ -5,21 +5,36 @@
 //{
 //}
 
+
+std::vector<std::string> Problems::sortByLength(std::vector<std::string> array)
+{
+	std::sort(array.begin(), array.end(), [](std::string const& s1, std::string const& s2) { return s1.size() < s2.size(); });
+	return array;
+}
+
+std::string Problems::abbrevName(std::string name)
+{
+	//std::string ret;
+	//ret.push_back(toupper(name[0]));
+	//ret.push_back('.');
+	//ret.push_back(toupper(name[name.find(' ') + 1]));
+
+	//const char a = std::toupper(name[0]);
+	//const char b = std::toupper(name[name.find(' ') + 1]);
+	//return std::string({ a, '.', b });
+
+	std::string initials{ name[0], '.', name[name.find(' ') + 1]};
+	for (auto &c : initials) c = toupper(c);
+	return initials;
+}
+
 std::string Problems::printerError(const std::string& s)
 {
-	//int errors{ 0 };
-	//for (char c : s)
-	//{
-	//	if (c > 'm')
-	//	{
-	//		errors++;
-	//	}
-	//}
-	//return std::to_string(errors) + '/' + std::to_string(s.length());
 	auto const errors = std::count_if(s.begin(), s.end(), [](const char c)
 		{
 			return c > 'm';
 		});
+
 	return std::to_string(errors) + "/" + std::to_string(s.length());
 }
 

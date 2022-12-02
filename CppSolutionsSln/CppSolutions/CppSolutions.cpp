@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Problems.h"
+#include <vector>
 
 using namespace std;
 
@@ -25,9 +26,25 @@ int main()
 
     //std::cout << p.bmi(91.6094, 1.69719) << std::endl;
 
+    //int data{ 22 };
+    //int *pointer1{ &data };
+    //std::cout << "value of pointer: " << *pointer1 << std::endl; // dereferencing a pointer
+
     //---------------------------------------------------------------------
 
-    std::cout << p.printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") << std::endl;
+    //auto t = p.Add(2, 3);
+    //std::cout << t << std::endl;
+
+
+    auto arr = p.sortByLength({ "", "Moderately", "Brains", "Pizza" });
+
+    std::cout << "[ ";
+    for (auto i : arr)
+    {
+        std::cout << i << ", ";
+    }
+    std::cout << " ]";
+    
 
 
 

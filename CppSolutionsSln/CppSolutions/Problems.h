@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iterator>
 #include <array>
+#include <vector>
 
 #pragma once
 class Problems
@@ -19,6 +20,12 @@ public:
 	Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 	*/
 	int cockroach_speed(double s);
+	/**
+	* takes an array of strings as an argument and returns a sorted array containing the same strings, 
+	* ordered from shortest to longest.
+	*/
+	std::vector<std::string> sortByLength(std::vector<std::string> array);
+	std::string abbrevName(std::string name);
 	std::string printerError(const std::string& s);
 	double Add(double x, double y);
 	std::string bmi(double w, double h);
