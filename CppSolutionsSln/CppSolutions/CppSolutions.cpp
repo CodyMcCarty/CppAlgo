@@ -38,6 +38,8 @@ int main()
 
     auto arr = p.sortByLength({ "", "Moderately", "Brains", "Pizza" });
 
+    //std::cout << &arr;
+
     std::cout << "[ ";
     for (auto i : arr)
     {

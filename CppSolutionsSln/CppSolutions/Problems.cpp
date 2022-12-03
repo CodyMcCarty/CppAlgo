@@ -8,7 +8,7 @@
 
 std::vector<std::string> Problems::sortByLength(std::vector<std::string> array)
 {
-	std::sort(array.begin(), array.end(), [](std::string const& s1, std::string const& s2) { return s1.size() < s2.size(); });
+	std::sort(array.begin(), array.end(), [](auto s1, auto s2) { return s1.length() < s2.length(); });
 	return array;
 }
 
