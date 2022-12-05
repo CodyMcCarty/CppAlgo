@@ -31,21 +31,30 @@ int main()
     //std::cout << "value of pointer: " << *pointer1 << std::endl; // dereferencing a pointer
 
     //---------------------------------------------------------------------
+    /*
+[7,1,5,3,6,4]
+[1,2,4]
+[1]
+[2,1]
+[1,2]
+[6,5,7,5,3,4,5,7,5,4,3,2]
+    */
 
-    //auto t = p.Add(2, 3);
-    //std::cout << t << std::endl;
+    std::vector<int> a = { 6,5,7,5,3,4,5,7,5,4,3,2 }; // 3,7 = 4
+    std::vector<int> a2 = { 7,1,5,3,6,4 }; // 1,6 = 5
+    std::vector<int> a3 = { 1,2,4 }; // 1,4 = 3
+    auto t = p.maxProfit(a3);
+    std::cout << t << std::endl;
 
+    //std::vector<int> param = { 2,7,11,15 };
+    //auto arr = p.twoSum(param, 9);
 
-    auto arr = p.sortByLength({ "", "Moderately", "Brains", "Pizza" });
-
-    //std::cout << &arr;
-
-    std::cout << "[ ";
-    for (auto i : arr)
-    {
-        std::cout << i << ", ";
-    }
-    std::cout << " ]";
+    //std::cout << "[ ";
+    //for (auto i : arr)
+    //{
+    //    std::cout << i << ", ";
+    //}
+    //std::cout << " ]";
     
 
 

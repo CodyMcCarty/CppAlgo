@@ -5,11 +5,42 @@
 //{
 //}
 
+int Problems::maxProfit(std::vector<int>& prices)
+{
+	int diff = 0, price = prices[0];
+	for (int r = 1; r < prices.size(); r++)
+	{
+		price = std::min(price, prices[r]);
+		diff = std::max(diff, prices[r] - price);
+	}
+	return diff;
+}
+
+std::vector<int> Problems::twoSum(std::vector<int>& nums, int target)
+{
+	for (int i{ 0 }; i < nums.size(); i++) {
+		for (int j{ i + 1 }; j < nums.size(); j++) {
+			if (i + j == target) {
+				return { i, j };
+			}
+		}
+	}
+	return { 0, 0, 0 };
+}
+
+
+std::string Problems::no_space(std::string x)
+{
+	x.erase(std::remove(x.begin(), x.end(), ' '), x.end());
+	return x;
+}
+
 
 std::vector<std::string> Problems::sortByLength(std::vector<std::string> array)
 {
 	std::sort(array.begin(), array.end(), [](auto s1, auto s2) { return s1.length() < s2.length(); });
 	return array;
+	// instead of auto s1 -> auto const & s1,... 
 }
 
 std::string Problems::abbrevName(std::string name)

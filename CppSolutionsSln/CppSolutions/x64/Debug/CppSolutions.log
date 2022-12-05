@@ -1,4 +1,6 @@
-﻿  Problems.cpp
-C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\CppSolutions\Problems.cpp(43,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\CppSolutions\Problems.cpp(61,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  CppSolutions.cpp
+  Problems.cpp
+C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\CppSolutions\Problems.cpp(74,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\CppSolutions\Problems.cpp(92,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
   CppSolutions.vcxproj -> C:\Users\codyj\Documents\Programming\personal\cppAlgoDs\CppSolutionsSln\x64\Debug\CppSolutions.exe
