@@ -31,19 +31,10 @@ int main()
     //std::cout << "value of pointer: " << *pointer1 << std::endl; // dereferencing a pointer
 
     //---------------------------------------------------------------------
-    /*
-[7,1,5,3,6,4]
-[1,2,4]
-[1]
-[2,1]
-[1,2]
-[6,5,7,5,3,4,5,7,5,4,3,2]
-    */
 
-    std::vector<int> a = { 6,5,7,5,3,4,5,7,5,4,3,2 }; // 3,7 = 4
-    std::vector<int> a2 = { 7,1,5,3,6,4 }; // 1,6 = 5
-    std::vector<int> a3 = { 1,2,4 }; // 1,4 = 3
-    auto t = p.maxProfit(a3);
+
+    std::vector<int> a1 { -5,15,25,35,45,55,65,75,85,95,100,115,125,135,145,155,165,175,185,195 };
+    auto t = p.search(a1, -5);
     std::cout << t << std::endl;
 
     //std::vector<int> param = { 2,7,11,15 };

@@ -5,6 +5,68 @@
 //{
 //}
 
+//[-5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 100, 115, 125, 135, 145, 155, 165, 175, 185, 195]
+int Problems::search(std::vector<int>& nums, int target)
+{
+	int l = 0, r = nums.size() - 1;
+	while (l < r) {
+		int m = l + (r - l) / 2;
+		if (nums[m] == target) return m;
+		else if (target > nums[m]) l = m;
+		else if (target < nums[m]) r = m - 1;
+	}
+
+	return -1;
+}
+
+bool Problems::isValid(std::string s)
+{
+	std::unordered_map<char, int> count;
+	//auto glambda = [](auto a, auto&& b) { return a < b; };
+	//auto addMap = [](auto c) {(count.find(c) == count.end()) ? count[c] = 1 : count[c] += 1; };
+
+	for (auto c : s)
+	{
+		switch (c)
+		{
+		//case '(':
+		//{
+		//	(count.find(c) == count.end()) ? count[c] = 1 : count[c] += 1;
+		//	break;
+		//}
+		case '[':
+		case '(':
+		//{
+		//	(count.find(c) == count.end()) ? count[c] = 1 : count[c] += 1;
+		//	break;
+		//}
+		case '{':
+		{
+			(count.find(c) == count.end()) ? count[c] = 1 : count[c] += 1;
+			break;
+		}
+		case ')':
+		{
+			char o = '(';
+			if (count.find(o) == count.end() || count[o] == 0)
+			{
+				return false;
+			}
+			else count[o] -= 1;
+			break;
+		}
+		}
+	}
+	
+	for (auto const& x : count)
+	{
+		if (x.second != 0) return false;
+	}
+
+	auto x = count['('];
+	return count['('] == 1;
+}
+
 int Problems::maxProfit(std::vector<int>& prices)
 {
 	int diff = 0, price = prices[0];

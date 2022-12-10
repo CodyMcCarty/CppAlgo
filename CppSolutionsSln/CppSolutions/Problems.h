@@ -5,11 +5,16 @@
 #include <iterator>
 #include <array>
 #include <vector>
+#include <unordered_map>
 
 #pragma once
 class Problems
 {
 public:
+	int search(std::vector<int>& nums, int target);
+	bool isValid(std::string s);
+
+
 	/** Beginner Series #4 Cockroach
 	* The cockroach is one of the fastest insects. Write a function which takes its 
 	speed in km per hour and returns it in cm per second, rounded down to the 
