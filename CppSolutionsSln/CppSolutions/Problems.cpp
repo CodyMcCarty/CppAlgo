@@ -9,10 +9,10 @@
 int Problems::search(std::vector<int>& nums, int target)
 {
 	int l = 0, r = nums.size() - 1;
-	while (l < r) {
+	while (l <= r) {
 		int m = l + (r - l) / 2;
 		if (nums[m] == target) return m;
-		else if (target > nums[m]) l = m;
+		else if (target > nums[m]) l = m + 1;
 		else if (target < nums[m]) r = m - 1;
 	}
 

@@ -11,6 +11,7 @@
 class Problems
 {
 public:
+ 
 	int search(std::vector<int>& nums, int target);
 	bool isValid(std::string s);
 
